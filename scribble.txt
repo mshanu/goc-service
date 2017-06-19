@@ -1,0 +1,12 @@
+var script = document.createElement('script');script.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js";document.getElementsByTagName('head')[0].appendChild(script);
+.crwActualPrice
+.crwActualPrice
+$(".crwTitle a").toArray().map(e => $(e).text())
+$(".crwTitle a").toArray().map(e => $(e).parent().siblings(".crwPrice").children(".crwActualPrice")[0].innerText)
+
+$(".crwTitle a").toArray()
+.map(e => ({name:$(e).text(),price:Number($(e).parent().siblings(".crwPrice").children(".crwActualPrice")[0].innerText.trim().replace(",",""))}))
+
+
+$(".dne-itemtile-detail span").toArray()
+.map(e => ({name:$(e).text(),price:Number($(e).parent().siblings(".dne-itemtile-price").children()[1].innerText.replace("Rs. ",""))}))
