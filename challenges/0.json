@@ -1,53 +1,53 @@
 {
-    "stage": 0,
-    "statement": "Start silly, send the system back the max priced product for the given input products.You 'GET' the input from http://host:port/challenge/input and then 'POST' the answer to http://host:port/challenges/output. The request for input and output should not be more than 2 secs",
-    "sampleInput": "Input will be a json of the format eg:{ input: [{ productName:\"Kindle Paperwhite\",  price: 5345.00, currency: \"INR\" }, { productName:\"iPad Tablet\",  price: 24900.00, currency: \"INR\" }, { productName:\"Microsoft Surface Pro 4\",  price: 87299.00, currency: \"INR\" } ]} you need to post max priced product like {output:{ productName:\"iPad Tablet\",  price: 24900.00, currency: \"INR\" }}",
-    "inputOutputs": [{
-        "input": [{
-            "name": "Moto G Play, 4th Gen (Black)",
-            "price": 7999,
-            "currency": "INR"
-        }, {
-            "name": "Coolpad Note 5 Lite (Space Grey, 3GB RAM + 16 GB)",
-            "price": 7499,
-            "currency": "INR"
-        }, {
-            "name": "Samsung On5 Pro (Gold)",
-            "price": 7990,
-            "currency": "INR"
-        }, {
-            "name": "Samsung On7 Pro (Gold)",
-            "price": 9490,
-            "currency": "INR"
-        }, {
-            "name": "OnePlus 3T (Gunmetal, 6GB RAM + 64GB memory)",
-            "price": 29999,
-            "currency": "INR"
-        }, {
-            "name": "Coolpad Note 5 (Royal Gold, 32 GB)",
-            "price": 9999,
-            "currency": "INR"
-        }, {
-            "name": "Moto G5 (3 GB, Lunar Grey)",
-            "price": 11999,
-            "currency": "INR"
-        }, {
-            "name": "Apple iPhone 6 (Space Grey, 32GB)",
-            "price": 25999,
-            "currency": "INR"
-        }, {
-            "name": "Coolpad Cool 1 (Gold, 3GB RAM + 32GB memory)",
-            "price": 9999,
-            "currency": "INR"
-        }, {
-            "name": "Lenovo Vibe K5 (Grey)",
-            "price": 7499,
-            "currency": "INR"
-        }],
-        "output": {
-            "name": "Apple iPhone 6 (Space Grey, 32GB)",
-            "price": 25999,
-            "currency": "INR"
-        }
+  "stage": 0,
+  "statement": "Start silly, a race for the count. Given list of products and return back the count and you get a furious start",
+  "instructions": "You can 'GET' the input from http://host:port/challenge/input and output should be 'POST' json to http://host:port/challenge/output. Importan note: The time between request 'GET' input and 'POST' request should not exceed 2 secs",
+  "sampleInput": {
+    "input":[{
+      "name": "Apple iPhone 6s 128GB Space Grey Refurbished",
+      "price": 1737
+    }, {
+    "name": "Nokia 3220",
+    "price": 999
+    }, {
+    "name": "iBall Slide Brace-X1 Mini 16GB",
+    "price": 1737
+    },
+    {
+      "name": "Dekor World POLKA DOT DIWAN SET- PACK OF 8 PCS",
+      "price": 786 
+    }, {
+    "name": "Swayam Yellow Colour Floral Printed Eyelet Door Curtain - Window Curtain",
+    "price": 654
     }]
+  },
+  "sampleOutput":{
+    "output":{
+      "count":5
+    }
+  },
+  "inputOutputs": [{
+    "input":[{
+      "name": "Xiaomi Redmi 3S Prime 32GB 3GB",
+      "price": 1737
+    }, {
+    "name": "Sennheiser CX 180 Street II In-Ear Headphone",
+    "price": 649
+    }, {
+    "name": "Honor AP007 13000 mAH Power Bank Grey",
+    "price": 869
+    }, {
+    "name": "Homefab India Set of 2 Royal Silky Aqua Blue Designer Curtains (HF158)",
+    "price": 629
+    }, {
+    "name": "Homefab India Set of 2  Beautiful Marble Plain Black Curtains (HF342)",
+    "price": 499
+    }, {
+    "name": "Set of 2 - measuring cups & measuring spoon",
+    "price": 350
+    }],
+    "output":{
+      "count": 6
+    }
+  }]
 }

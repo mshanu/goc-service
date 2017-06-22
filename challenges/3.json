@@ -1,6 +1,6 @@
 {
-    "stage": 1,
-    "statement": "Giant leap !! easier step, next. Product now has startDate and endDate to specify when it is active. endData null tells the product is active for ever from the startDate. The startDate and endDate are inclusive. 'POST' the count of products which are active today",
+    "stage": 3,
+    "statement": "Rocking!! Money matters, so as the total value of product active.",
     "instructions": "You can 'GET' the input from http://host:port/challenge/input and output should be 'POST' json to http://host:port/challenge/output. Importan note: The time between request 'GET' input and 'POST' request should not exceed 2 secs",
     "sampleInput": {
         "input": [{
@@ -27,11 +27,17 @@
             "price": 999,
             "startDate": "30-01-2018",
             "endDate": null
+        }, {
+            "name": "Homefab India Set of 2  Beautiful Marble Plain Black Curtains (HF342)",
+            "category": "Furniture",
+            "price": 499,
+            "startDate": "30-01-2018",
+            "endDate": null
         }]
     },
     "sampleOutput": {
         "output": {
-            "count": "2"
+            "totalValue": 1886
         }
     },
     "inputOutputs": [{
@@ -63,7 +69,7 @@
             "name": "Dream Decor Premium Quality Designer Cushion Cover (12x12-inch) - Set of 5",
             "category": "Furniture",
             "price": 299,
-            "startDate": "01-11-2015",
+            "startDate": "01-11-2018",
             "endDate": "07-10-2018"
         }, {
             "name": "10 feet Exporthub Beautiful Royal Silky Eyelet Very Very Long Door Curtain- 2PCS",
@@ -81,11 +87,11 @@
             "name": "Heat Resistant Silicone spatula /Turners for your Kitchen",
             "category": "Kitchen",
             "price": 599,
-            "startDate": "01-11-2015",
+            "startDate": "01-11-2018",
             "endDate": null
         }],
         "output": {
-            "count": 5
+            "totalValue": 234234
         }
     }]
 }

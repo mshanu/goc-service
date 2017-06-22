@@ -17,7 +17,9 @@ describe('challenge', () => {
         new Challenge({
           stage: 0,
           statement: "Cound the number of items",
-          sampleInput: "The sample input",
+          instructions: "This is the instructions",
+          sampleInput: {input:{name:"shanu"}},
+          sampleOutput: {output: {name: "yahh"}},
           "inputOutputs":[{ 
             input:{items:[{name:"Samsung Galaxy", price:123.4}]},
             output: {count: 1} 
@@ -26,7 +28,9 @@ describe('challenge', () => {
         new Challenge({
           stage: 1,
           statement: "Which has the maximum price",
-          sampleInput: "The sample input",
+          instructions: "This is the instructions",
+          sampleInput: {input:{name:"shanu"}},
+          sampleOutput: {output: {name: "yahh"}},
           "inputOutputs":[{ 
             input:{items:[{name:"Samsung Galaxy", price:123.4},{name:"Samsung Galaxy", price:323.4}]},
             output: {name:"Samsung Galaxy", price:323.4}
@@ -44,6 +48,8 @@ describe('challenge', () => {
     setTimeout(function () {
       expect(sendSpy.called).to.be.true 
       expect(sendSpy.getCall(0).args[0].statement).to.be.equal("Which has the maximum price")
+      expect(sendSpy.getCall(0).args[0].sampleInput.input.name).to.be.equal("shanu")
+      expect(sendSpy.getCall(0).args[0].sampleOutput.output.name).to.be.equal("yahh")
       expect(sendSpy.getCall(0).args[0].inputOutputs).to.be.undefined
       done();
     }, 100);
@@ -71,7 +77,7 @@ describe('challenge', () => {
         done();
       })
     },100);
-    });
+  });
 
   it('should return 406 when the output to the challenge is wrong', (done) => {
     let sendSpy = sinon.spy(), statusStub = sinon.stub();
@@ -86,6 +92,6 @@ describe('challenge', () => {
   });
 
 
-  
-  });
+
+});
 

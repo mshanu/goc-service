@@ -8,5 +8,14 @@ $(".crwTitle a").toArray()
 .map(e => ({name:$(e).text(),price:Number($(e).parent().siblings(".crwPrice").children(".crwActualPrice")[0].innerText.trim().replace(",",""))}))
 
 
-$(".dne-itemtile-detail span").toArray()
-.map(e => ({name:$(e).text(),price:Number($(e).parent().siblings(".dne-itemtile-price").children()[1].innerText.replace("Rs. ",""))}))
+$(".refit-itemcard-detail .refit-itemcard-title span").toArray()
+.map(e => ({name:$(e).text(),category:"Furniture",price:Number($(e).parent().parent().siblings()[0].innerText.replace("Rs. ","")),discount:Math.floor(Math.random()*50)}))
+
+
+
+*. Count
+* Active product count
+* Max price
+
+* Max priced after discount for each category
+*  Discount weighted average
