@@ -12,11 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req,res,next) => {
   if(req.url === '/user/register'){
+    user.list(io);
     return next();
   }
   user.validateAndPass(req,res,next);
 });
-
 app.post('/user/register', user.create);
 app.post('/challenge', challenge.create);
 
@@ -26,6 +26,6 @@ app.post('/challenge/output',preconditions.userAttemptTimeValidation, challenge.
 //app.post('/challenge/:challengeId/attempt', user.challengeAttempt);
 app.get('/ping', (req,res) => res.send({ping:'pong'}));
 
-io.on('connection', (socket) => console.log('a user connected'))
+io.on('connection', (socket) => user.list(io))
 
 http.listen(3000,() => console.log("Server listening"));

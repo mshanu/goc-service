@@ -28,8 +28,11 @@ const validateAndPass = function(req,res,next){
       return res.status(401).send('Not a valid user');
     });
 }
-
+const list = function(io) {
+  return User.find().then((users) => io.emit('user update',users));
+}
 module.exports = {
   create: create,
-  validateAndPass: validateAndPass
+  validateAndPass: validateAndPass,
+  list: list
 }
