@@ -1,7 +1,7 @@
 {
   "stage": 0,
-  "statement": "Start silly, a race for the count. Given list of products and return back the count and you get a furious start",
-  "instructions": "You can 'GET' the input from http://host:port/challenge/input and output should be 'POST' json to http://host:port/challenge/output. Importan note: The time between request 'GET' input and 'POST' request should not exceed 2 secs",
+  "statement": "Start silly, acceleration for the count. Given list of products, return back the count and you get a furious start",
+  "instructions": "You can 'GET' the input from http://host:port/challenge/input and output should be 'POST' json to http://host:port/challenge/output. Importan note: The time between request 'GET' input and 'POST' requests should not exceed 2 secs",
   "sampleInput": {
     "input":[{
       "name": "Apple iPhone 6s 128GB Space Grey Refurbished",

@@ -17,7 +17,7 @@ app.use((req,res,next) => {
   }
   user.validateAndPass(req,res,next);
 });
-app.post('/user/register', user.create);
+app.post('/user/register',preconditions.userRegistration, user.create);
 app.post('/challenge', challenge.create);
 
 app.get('/challenge', challenge.userChallenge);
