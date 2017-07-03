@@ -70,7 +70,7 @@ describe('challenge', () => {
 
   it('should validate the output and increments users status if right', (done) => {
     let sendSpy = sinon.spy();
-    challenge.validateOutput({player:savedUser,body:{output: {name:"Samsung Galaxy", price:323.4}}}, {send:sendSpy}); 
+    challenge.validateOutput({emit:sinon.spy()})({player:savedUser,body:{output: {name:"Samsung Galaxy", price:323.4}}}, {send:sendSpy}); 
     setTimeout(function () {
       User.findByName("user1").then((user) => {
         expect(user.stage).to.be.equal(2)

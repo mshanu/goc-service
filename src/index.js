@@ -22,7 +22,7 @@ app.post('/challenge', challenge.create);
 
 app.get('/challenge', challenge.userChallenge);
 app.get('/challenge/input', challenge.challengeRequest);
-app.post('/challenge/output',preconditions.userAttemptTimeValidation, challenge.validateOutput);
+app.post('/challenge/output',preconditions.userAttemptTimeValidation, challenge.validateOutput(io));
 //app.post('/challenge/:challengeId/attempt', user.challengeAttempt);
 app.get('/ping', (req,res) => res.send({ping:'pong'}));
 
