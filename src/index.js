@@ -12,12 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req,res,next) => {
   if(req.url === '/user/register'){
-    user.list(io);
     return next();
   }
   user.validateAndPass(req,res,next);
 });
-app.post('/user/register',preconditions.userRegistration, user.create);
+app.post('/user/register',preconditions.userRegistration, user.create(io));
 app.post('/challenge', challenge.create);
 
 app.get('/challenge', challenge.userChallenge);

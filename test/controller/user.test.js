@@ -17,7 +17,7 @@ describe('user', () => {
 
   it('should return 412 if user alrady exists with the same name', (done) => {
     statusStub.withArgs(412).returns({send: sendSpy});
-    user.create(req,{status:statusStub});
+    user.create(sinon.spy())(req,{status:statusStub});
     setTimeout(function () {
       expect(statusStub.called).to.be.true
       expect(sendSpy.called).to.be.true
@@ -26,7 +26,7 @@ describe('user', () => {
   }); 
 
   it('should create user if user does not exists', (done) => {
-    user.create({body:{name:"new_user"}},{send:sendSpy})
+    user.create({emit:sinon.spy()})({body:{name:"new_user"}},{send:sendSpy})
     setTimeout(function () {
       User.find((err,records) => {
         expect(records).to.have.lengthOf(2);
