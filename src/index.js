@@ -1,6 +1,6 @@
 const app = require('express')();
 const http = require('http').Server(app);
-const io = require('socket.io')(http);
+const io = require('socket.io')(http,{path:'/napi'});
 const randomstring = require('randomstring')
 const bodyParser = require('body-parser')
 const user = require('./controller/user')
@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req,res,next) => {
+  if(req.url === '/napi'){
+    return next()
+  }
   if(req.url === '/user/register'){
     return next();
   }
