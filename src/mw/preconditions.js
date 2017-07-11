@@ -5,7 +5,7 @@ let userPresence = (req,res,next) => {
   return next();
 }
 let userRegistration = (req,res,next) => {
-  return User.count({}).then(count => count === 8 ? res.status(416).send('Maximum number of users registered'):  next());
+  return User.count({}).then(count => count > 9 ? res.status(416).send('Maximum number of users registered'):  next());
 }
 let userAttemptTimeValidation = (req,res,next) => {
   let player = req.player;
