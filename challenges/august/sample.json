@@ -1,0 +1,24 @@
+{
+    "people": [{
+        "name": "Mayukh",
+        "dob": "1978-07-07"
+    }, {
+        "name": "Smaran",
+        "dob": "1979-05-26"
+    }, {
+        "name": "Manik",
+        "dob": "1979-11-21"
+    }, {
+        "name": "Tanaya",
+        "dob": "1979-12-01"
+    }, {
+        "name": "Yasmin",
+        "dob": "1980-03-14"
+    }, {
+        "name": "Mrinal",
+        "dob": "1980-07-13"
+    }, {
+        "name": "Urja",
+        "dob": "1980-08-31"
+    }]
+}

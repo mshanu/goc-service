@@ -1,0 +1,88 @@
+{
+    "stage": 3,
+    "statement": "Whats the average age of friends of a person?",
+    "instructions": "You can 'GET' the input from http://host:port/challenge/input and output should be 'POST' json to http://host:port/challenge/output. Importan note: The time between request 'GET' input and 'POST' requests should not exceed 1 sec",
+    "sampleInput": {
+        "input": {
+            "people": [{
+                "name": "Aman",
+                "age": 22
+            }, {
+                "name": "Abir",
+                "age": 26
+            }, {
+                "name": "Komal",
+                "age": 22
+            }, {
+                "name": "Arya",
+                "age": 26
+            }, {
+                "name": "Armaan",
+                "age": 22
+            }, {
+                "name": "Noor",
+                "age": 24
+            }],
+            "connection": [{
+                "Aman": ["Abir"]
+            }, {
+                "Abir": ["Noor", "Aman"]
+            }, {
+                "Komal": ["Arya"]
+            }, {
+                "Arya": ["Komal", "Noor"]
+            },{
+                "Noor": ["Arya", "Abir"]
+            }],
+            "averageFriendsAge": "Abir"
+        }
+    },
+    "sampleOutput": {
+        "output": {
+           "averageAge": 23
+        }
+    },
+    "inputOutputs": [{
+        "input": {
+            "people": [{
+                "name": "Mayukh",
+                "age": 22
+            }, {
+                "name": "Smaran",
+                "age": 24
+            }, {
+                "name": "Manik",
+                "age": 23
+            }, {
+                "name": "Tanaya",
+                "age": 27
+            }, {
+                "name": "Yasmin",
+                "age": 25
+            }, {
+                "name": "Mrinal",
+                "age": 22
+            }, {
+                "name": "Urja",
+                "age": 22
+            }],
+            "connection": [{
+                "Mayukh": ["Manik"]
+            }, {
+                "Manik": ["Mayukh","Smaran", "Tanaya", "Yasmin", "Mrinal"]
+            }, {
+                "Smaran": ["Manik","Tanaya"]
+            }, {
+                "Tanaya": ["Manik","Mrinal"]
+            }, {
+                "Yasmin": ["Manik"]
+            }, {
+                "Mrinal": ["Manik","Smaran"]
+            }],
+            "averageFriendsAge": "Yasmin"
+        },
+        "output": {
+             "averageAge": 23
+        }
+    }]
+}

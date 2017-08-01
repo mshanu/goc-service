@@ -1,0 +1,105 @@
+{
+    "stage": 1,
+    "statement": "Social network, people starts connecting, lets call the connect to be 'friendship'. Given people and their frienship connect. Suggest friends, who are friends to a persons friend that the person has not connected yet.",
+    "instructions": "You can 'GET' the input from http://host:port/challenge/input and output should be 'POST' json to http://host:port/challenge/output. Importan note: The time between request 'GET' input and 'POST' requests should not exceed 1 sec",
+    "sampleInput": {
+        "input": {
+            "people": [{
+                "name": "Aman",
+                "age": 22
+            }, {
+                "name": "Abir",
+                "age": 34
+            }, {
+                "name": "Komal",
+                "age": 24
+            }, {
+                "name": "Arya",
+                "age": 18
+            }, {
+                "name": "Armaan",
+                "age": 35
+            }, {
+                "name": "Noor",
+                "age": 37
+            }],
+            "connection": [{
+                "Aman": ["Abir"]
+            }, {
+                "Abir": ["Noor", "Aman"]
+            }, {
+                "Komal": ["Arya"]
+            }, {
+                "Arya": ["Komal", "Noor"]
+            }, {
+                "Armaan": ["Noor"]
+            }, {
+                "Noor": ["Arya", "Abir", "Armaan"]
+            }],
+            "requiredSuggestion": "Arya"
+        }
+    },
+    "sampleOutput": {
+        "output": {
+            "suggestedFriends": [{
+                "name": "Abir",
+                "age": 34
+            }, {
+                "name": "Armaan",
+                "age": 35
+            }]
+        }
+    },
+    "inputOutputs": [{
+        "input": {
+            "people": [{
+                "name": "Mayukh",
+                "age": 22
+            }, {
+                "name": "Smaran",
+                "age": 22
+            }, {
+                "name": "Manik",
+                "age": 23
+            }, {
+                "name": "Tanaya",
+                "age": 27
+            }, {
+                "name": "Yasmin",
+                "age": 25
+            }, {
+                "name": "Mrinal",
+                "age": 22
+            }, {
+                "name": "Urja",
+                "age": 22
+            }],
+            "connection": [{
+                "Mayukh": ["Manik","Smaran"]
+            }, {
+                "Manik": ["Mayukh","Smaran", "Tanaya", "Yasmin", "Mrinal"]
+            }, {
+                "Smaran": ["Manik"]
+            }, {
+                "Tanaya": ["Manik"]
+            }, {
+                "Yasmin": ["Manik"]
+            }, {
+                "Mrinal": ["Manik"]
+            }],
+            "requiredSuggestion": "Mayukh"
+        },
+        "output": {
+            "suggestedFriends": [{
+                "name": "Mrinal",
+                "age": 22
+            }, {
+                "name": "Yasmin",
+                "age": 25
+            },{
+                "name": "Tanaya",
+                "age": 27
+            }]
+        }
+    }]
+}
