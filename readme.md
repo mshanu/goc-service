@@ -1,3 +1,4 @@
+HOST =10.134.20.141
 
 To register post a request with json {"name":"team name"} to http://host:3000/user/register
 The response contains the userId
