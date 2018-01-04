@@ -1,1 +1,3 @@
-db.challenges.find({_id:ObjectId("5a37d8b9cf36312109a362e3")})
+db.users.update({_id:ObjectId("59635376df071421481bcf56")},{$set:{"stage":0}})
+
+db.users.updateMany({},{$set:{"stage":0}})

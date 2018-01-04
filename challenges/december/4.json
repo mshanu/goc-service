@@ -136,7 +136,7 @@
                 "screenplay_by": ["A. L. Vijay", "Satya", "Chintan Gandhi"],
                 "story_by": ["A. L. Vijay", "Paul Aaron"],
                 "starring": ["Tamannaah", "Prabhu Deva", "Sonu Sood"],
-                "music_by": ["Original songs:", "Sajid-Wajid", "Vishal Mishra", "Raaj Aashoo", "Additional Hindi songs", "Dr. Bal Siddhu", "Gurinder Seagal", "Background score:", "Gopi Sundar"],
+                "music_by": "Original songs:",
                 "cinematography": "Manush Nandan",
                 "edited_by": "Anthony",
                 "production_company": ["Tamil:", "Prabhu Deva Studios", "Telugu:MVV Cinema", "BlueCircle Corporation", "BLN Cinema", "Hindi:", "Shakti Sagar Productions"],
@@ -284,7 +284,7 @@
             }]
         },
         "output": {
-            "like_minded": "Low"
+            "like_minded": "High"
         }
     }]
 }
